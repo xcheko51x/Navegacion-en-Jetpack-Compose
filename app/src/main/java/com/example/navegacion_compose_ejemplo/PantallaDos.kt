@@ -15,10 +15,10 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 
 @Composable
-fun PantallaDos(navController: NavHostController) {
+fun PantallaDos(navController: NavHostController, idUsuario: Int) {
     Box(modifier = Modifier
         .fillMaxSize()
-        .background(Color.Green)
+        .background(Color.Red)
     ) {
         Column(
             modifier = Modifier.fillMaxSize().align(Alignment.Center),
@@ -26,16 +26,16 @@ fun PantallaDos(navController: NavHostController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Pantalla 2",
+                text = "Pantalla 2\nTu id de usuario es: $idUsuario",
                 fontSize = 20.sp,
                 color = Color.White
             )
 
             Button(
-                onClick = { navController.navigate(Routes.PantallaTres.route) }
+                onClick = { navController.navigate(Routes.PantallaUno.route) }
             ) {
                 Text(
-                    text = "Ir a pantalla 3"
+                    text = "Ir a pantalla 1"
                 )
             }
         }
