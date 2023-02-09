@@ -30,7 +30,7 @@ fun PantallaUno(navController: NavHostController) {
             )
 
             Button(
-                onClick = { navController.navigate("pantalla2") }
+                onClick = { navController.navigate(Routes.PantallaDos.route) }
             ) {
                 Text(
                     text = "Ir a pantalla 2"
